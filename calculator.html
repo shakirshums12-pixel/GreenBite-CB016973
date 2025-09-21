@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Calorie Calculator • GreenBite</title>
+
+<meta name="description" content="GreenBite • Simple wellness site for healthy food, workouts and mindfulness." />
+<link rel="icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+
+<link rel="manifest" href="manifest.json">
+
+<link href="css/styles.css" rel="stylesheet">
+
+<script defer src="js/utils.js"></script>
+<script defer src="js/main.js"></script>
+<script defer src="js/calculator.js"></script>
+
+</head>
+
+<body>
+<header class="site-header">
+
+  <a class="brand" href="index.html">
+    <img src="Images/greenbite logo.png" alt="GreenBite logo" class="logo" />
+    <span>GreenBite</span>
+  </a>
+
+  <button id="hamburger" class="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+  <nav id="nav" class="nav">
+    <a href="index.html">Home</a>
+     <a href="recipes.html">Recipes</a>
+    <a href="calculator.html">Calculator</a>
+  <a href="workout.html">Workout</a>
+  <a href="mindfulness.html">Mindfulness</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Calorie & Nutrition Calculator</h1>
+
+  <form id="calc-form" class="card form">
+    <div class="row">
+
+      <label>Age <input type="number" id="age" min="1" max="120" required></label>
+      <label>Gender 
+        <select id="gender" required>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="row">
+      <label>Height (cm) <input type="number" id="height" min="50" max="250" required></label>
+      <label>Weight (kg) <input type="number" id="weight" min="10" max="300" required></label>
+    </div>
+
+    <div class="row">
+      <label>Activity Level
+        <select id="activity" required>
+          <option value="1.2">Sedentary (little/no exercise)</option>
+          <option value="1.375">Lightly active (1–3 days/week)</option>
+          <option value="1.55">Moderately active (3–5 days/week)</option>
+          <option value="1.725">Very active (6–7 days/week)</option>
+          <option value="1.9">Super active (physical job)</option>
+        </select>
+      </label>
+    </div>
+
+
+    <button type="submit" class="btn">Calculate</button>
+    <p id="calc-error" class="msg"></p>
+  </form>
+
+  <section id="results" class="results hidden">
+
+    <h2>Your Results below</h2>
+
+    <p><b>BMR:</b> <span id="bmr">0</span> kcal/ 1 day</p>
+    <p><b>TDEE:</b> <span id="tdee">0</span> kcal/ 1 day</p>
+
+    <div class="bars">
+      <div class="bar"><span>Carbs (50%)</span><div id="bar-carbs" class="fill" style="width:0%"></div></div>
+      <div class="bar"><span>Protein (20%)</span><div id="bar-protein" class="fill" style="width:0%"></div></div>
+      <div class="bar"><span>Fat (30%)</span><div id="bar-fat" class="fill" style="width:0%"></div></div>
+    </div>
+    <p><small>Carbs: <span id="carb-g">0</span> g • Protein: <span id="protein-g">0</span> g • Fat: <span id="fat-g">0</span> g</small></p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <form id="newsletter" class="newsletter">
+    <label for="email">Join our newsletter:</label>
+    <input id="email" name="email" type="email" placeholder="you@example.com" required>
+    <button type="submit">Subscribe</button>
+    <small id="news-msg" class="msg" aria-live="polite"></small>
+  </form>
+  <p class="tiny">© <span id="year"></span> GreenBite</p>
+</footer>
+
+</body>
+</html>

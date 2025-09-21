@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Recipes • GreenBite</title>
+
+<meta name="description" content="GreenBite • Simple wellness site for healthy food, workouts and mindfulness." />
+<link rel="icon" href="assets/favicon.ico">
+
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+
+<link rel="manifest" href="manifest.json">
+
+<link href="css/styles.css" rel="stylesheet">
+
+<script defer src="js/utils.js"></script>
+<script defer src="js/main.js"></script>
+
+<script defer src="data/recipes.js"></script>
+<script defer src="js/recipes.js"></script>
+
+</head>
+
+<body>
+<header class="site-header">
+
+  <a class="brand" href="index.html">
+    <img src="Images/greenbite logo.png" alt="GreenBite logo" class="logo" />
+    <span>GreenBite</span>
+  </a>
+
+  <button id="hamburger" class="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+  <nav id="nav" class="nav">
+    <a href="index.html">Home</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="workout.html">Workout</a>
+    <a href="mindfulness.html">Mindfulness</a>
+    <a href="contact.html">Contact</a>
+
+  </nav>
+
+</header>
+
+<main>
+
+  <section class="page-head">
+    <h1>Healthy Recipes</h1>
+    <div class="filters">
+      <input id="q" type="search" placeholder="Search by name…">
+      <select id="category">
+        <option value="">All categories</option>
+        <option>Breakfast</option>
+        <option>Lunch</option>
+        <option>Dinner</option>
+        <option>Snacks</option>
+        <option>Drinks</option>
+      </select>
+    </div>
+  </section>
+
+  <section>
+    <div id="cards" class="grid cards"></div>
+  </section>
+
+  <dialog id="recipe-modal">
+    <article id="modal-content"></article>
+    <button id="close-modal" class="btn outline">Close</button>
+  </dialog>
+
+</main>
+<footer class="site-footer">
+  <form id="newsletter" class="newsletter">
+    <label for="email">Join our newsletter:</label>
+    <input id="email" name="email" type="email" placeholder="you@example.com" required>
+    <button type="submit">Subscribe</button>
+    <small id="news-msg" class="msg" aria-live="polite"></small>
+  </form>
+
+  <p class="tiny">© <span id="year"></span> GreenBite</p>
+</footer>
+
+</body>
+</html>
