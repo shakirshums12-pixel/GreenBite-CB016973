@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     err.textContent = '';
 
-    let bmr = 10 * weight + 6.25 * height - 5 * age + (gender === 'Male' ? 5 : -161);
+    let bmr = 10 * weight + 6.25 * height - 5 * age + (gender === 'male' ? 5 : -161);
     bmr = Math.round(bmr);
     var tdee = Math.round(bmr * activity);
 
